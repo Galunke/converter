@@ -1,6 +1,7 @@
 <template>
-  <div class="container mx-auto my-4 grid gap-4 grid-cols-2">
-    <h1 class="text-4xl col-span-2">Converter</h1>
+  <div class="container mx-auto my-4 px-4">
+    <h1 class="text-4xl">Converter</h1>
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mb-4">
       <textbox
         label="Input / Decoded"
         :value="input.value"
@@ -15,16 +16,14 @@
         :error="output.error"
         @input="decode"
       />
-
-    <div class="col-span-2">
-      <converter-button
-        v-for="(c, i) in converters"
-        :key="i"
-        :active="converter == c"
-        @click="switchMode(c)"
-        >{{ c.label }}</converter-button
-      >
     </div>
+    <converter-button
+      v-for="(c, i) in converters"
+      :key="i"
+      :active="converter == c"
+      @click="switchMode(c)"
+      >{{ c.label }}</converter-button
+    >
   </div>
 </template>
 
