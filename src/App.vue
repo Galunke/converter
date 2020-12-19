@@ -2,14 +2,14 @@
   <div class="container mx-auto my-4 grid gap-4 grid-cols-2">
     <h1 class="text-4xl col-span-2">Converter</h1>
       <textbox
-        label="Input"
+        label="Input / Decoded"
         :value="input.value"
         :invalid="!input.valid"
         :error="input.error"
         @input="encode"
       />
       <textbox
-        label="Output"
+        label="Output / Encoded"
         :value="output.value"
         :invalid="!output.valid"
         :error="output.error"
