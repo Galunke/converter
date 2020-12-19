@@ -1,11 +1,14 @@
 {
   "name": "converter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "predeploy": "vite build --base=/converter",
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "vue": "^3.0.4"
   },
   "devDependencies": {
